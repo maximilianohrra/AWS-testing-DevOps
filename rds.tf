@@ -4,8 +4,6 @@ resource "aws_db_subnet_group" "default" {
     subnet_ids  = ["${aws_subnet.wp-public-tf.id}", "${aws_subnet.wp-private-tf.id}"]
 }
 
-
-# La RDS Database uasa por Wordpress application
 resource "aws_db_instance" "wordpress" {
     identifier             = "wordpress-tf"
     allocated_storage      = 5
@@ -23,4 +21,5 @@ resource "aws_db_instance" "wordpress" {
     parameter_group_name   = "default.mysql5.7"
     publicly_accessible    = false
     skip_final_snapshot  = true
+    
 }

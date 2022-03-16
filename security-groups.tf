@@ -1,7 +1,6 @@
-# Security group para la  ECS Container Instance
 resource "aws_security_group" "wp-ecs-sg-tf" {
   name        = "wp-ecs-instance-tf"
-  description = "Security group para la  ECS Container Instance"
+  description = "Security group for EC2 Container Instances"
   vpc_id      = "${aws_vpc.default.id}"
 
   ingress {
@@ -30,7 +29,6 @@ resource "aws_security_group" "wp-ecs-sg-tf" {
   }
 }
 
-# Security group para la db
 resource "aws_security_group" "wp-db-sg-tf" {
   name        = "wp-db-tf"
   description = "Access to the RDS instances from the VPC"
@@ -62,7 +60,6 @@ resource "aws_security_group" "wp-db-sg-tf" {
   }
 }
 
-#Security group para el lb
 resource "aws_security_group" "wp-elb-tf" {
   name        = "wp-sg-elb-tf"
   description = "Security Group for the ELB"

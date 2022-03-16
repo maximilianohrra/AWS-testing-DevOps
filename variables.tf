@@ -1,17 +1,15 @@
 variable "region" {
   description = "AWS Region"
-  default     = "us-west-1"
+  
 }
 
 variable "aws_access_key" {
   description = "AWS access key"
-  default = "AKIAXGJ4BXXKUJQYMLNX"
   
 }
 
 variable "aws_secret_key" {
   description = "AWS secret key"
-  default = "PViU9FsoIfVA9WhYlXIBECdI3yb1hJ77gDwJpnXG"
 }
 
 variable "vpc_cidr_block" {
@@ -72,12 +70,12 @@ variable "db_name" {
 
 variable "db_user" {
   description = "RDS DB username"
-  default = "ecs"
+  default = "hmaximiliano"
 }
 
 variable "db_password" {
   description = "RDS DB password"
-  default = "Qwerty12345-"
+  default = "bkool2022"
 }
 
 variable "wp_title" {
@@ -97,7 +95,7 @@ variable "wp_password" {
 
 variable "wp_mail" {
   description = "Wordpress email"
-  default = "joan.fuster@gmail.com"
+  default = "maximilianohrra@gmail.com"
 }
 
 ###

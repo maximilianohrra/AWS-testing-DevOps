@@ -1,4 +1,3 @@
-# Creacion LB
 resource "aws_elb" "default" {
     name               = "wp-elb-tf"
     subnets            = ["${aws_subnet.wp-public-tf.id}"]
@@ -23,7 +22,7 @@ resource "aws_elb" "default" {
         Name = "wp-elb-tf"
     }
 }
-# LB policy
+
 resource "aws_lb_cookie_stickiness_policy" "wp-elb-tf-policy" {
     name                     = "wp-elb-tf-policy"
     load_balancer            = "${aws_elb.default.id}"
